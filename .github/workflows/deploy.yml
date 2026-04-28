@@ -3,7 +3,7 @@ name: Phaser Deploy
 on:
   push:
     branches:
-      - 'demo/**'
+      - 'main'
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Extract Short Branch Name
-        run: echo "BRANCH_NAME=${GITHUB_REF_NAME#demo/}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${GITHUB_REF_NAME#refs/heads/}" >> $GITHUB_ENV
 
       - name: Checkout Code
         uses: actions/checkout@v4
