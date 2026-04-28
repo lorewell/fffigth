@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>格斗游戏 - Fighting Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="vendor/phaser/plugins/spine4.1/SpinePlugin.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        #game-container {
+            border: 4px solid #444;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <!-- 配置 -->
+    <script src="src/config/RuntimeConfig.js"></script>
+    <script src="src/config/CombatConfig.js"></script>
+    <script src="src/config/InputConfig.js"></script>
+    <script src="src/config/RenderConfig.js"></script>
+
+    <!-- 常量聚合 -->
+    <script src="src/constants.js"></script>
+
+    <!-- 渲染器 -->
+    <script src="src/renderers/FighterRendererFactory.js"></script>
+    <script src="src/renderers/SpineFighterRenderer.js"></script>
+    
+    <!-- 实体类 -->
+    <script src="src/entities/Fighter.js"></script>
+    
+    <!-- 管理器 -->
+    <script src="src/managers/InputManager.js"></script>
+    <script src="src/managers/UIManager.js"></script>
+    <script src="src/managers/EffectsManager.js"></script>
+    <script src="src/managers/RoundManager.js"></script>
+    
+    <!-- 场景 -->
+    <script src="src/scenes/FightScene.js"></script>
+    
+    <!-- 游戏入口 -->
+    <script src="src/main.js"></script>
+</body>
+</html>
